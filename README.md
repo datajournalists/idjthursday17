@@ -3,8 +3,6 @@ Syllabus. Thursday class. CUNY-J School. Fall 2017
 
 ***Updated on September 6, 2017***
 
-**Short url:** [http://bit.ly/fidata1](http://bit.ly/fidata1)
-
 **Semester:** Fall 2017. Three credits.
 
 **Duration:** 15 Weeks. August 25-December 15, 2017.
