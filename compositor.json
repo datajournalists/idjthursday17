@@ -89,23 +89,6 @@
   },
   "content": [
     {
-      "component": "header",
-      "heading": "idjthursday17",
-      "subhead": "Fundamentals of Data and Interactivity. Thursday class, Fall 2017, CUNY-J School",
-      "children": [
-        {
-          "component": "ui/TweetButton",
-          "text": "idjthursday17: Fundamentals of Data and Interactivity. Thursday class, Fall 2017, CUNY-J School",
-          "url": null
-        },
-        {
-          "component": "ui/GithubButton",
-          "user": "datajournalists",
-          "repo": "idjthursday17"
-        }
-      ]
-    },
-    {
       "component": "article",
       "metadata": {
         "source": "github.readme"
