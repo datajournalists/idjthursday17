@@ -1,0 +1,609 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Fundamentals of Interactivity and Data Journalism. Thursday class. Fall 17. CUNY-J</title><style>*{box-sizing:border-box}.cxs-display-table{display:table}.cxs-799160745{font-size:48px}.cxs-4066908388{clear:both}.cxs-2947628758 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-1246195080{margin-left:-8px;margin-right:-8px}.cxs-857983649{}.cxs-857983649 h1{font-weight:700;letter-spacing:-0.01em;font-size:24px;margin-top:48px;margin-bottom:48px;border-bottom-width:4px;border-bottom-style:solid}.cxs-2947628758 a:hover{text-decoration:underline}.cxs-857983649 h2{font-weight:700;letter-spacing:-0.01em;font-size:24px;margin-top:48px;margin-bottom:48px;border-bottom-width:4px;border-bottom-style:solid}.cxs-2947628758 a{color:#08e;text-decoration: none}.cxs-857983649 h3{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:48px;margin-bottom:48px;border-bottom-width:2px;border-bottom-style:solid}.cxs-2947628758 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-857983649 h4{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 h5{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 h6{font-weight:700;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-857983649 p{overflow-x:auto;max-width:40em;margin-top:0px;margin-bottom:16px}.cxs-857983649 code{font-family:Menlo, monospace;font-size:14px;color:#05a}.cxs-857983649 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-top:16px;padding-bottom:16px;margin-top:32px;margin-bottom:32px;border-top:1px solid;border-bottom:1px solid}.cxs-857983649 pre .hljs-keyword{color:#05a}.cxs-857983649 pre .hljs-built_in{color:#444}.cxs-857983649 pre .hljs-type{color:#444}.cxs-857983649 pre .hljs-literal{color:#05a}.cxs-857983649 pre .hljs-number{color:#f30}.cxs-857983649 pre .hljs-regexp{color:#05a}.cxs-857983649 pre .hljs-string{color:#444}.cxs-857983649 pre .hljs-subst{color:#444}.cxs-857983649 pre .hljs-symbol{color:#05a}.cxs-857983649 pre .hljs-class{color:#05a}.cxs-857983649 pre .hljs-function{color:#f30}.cxs-857983649 pre .hljs-title{color:#05a}.cxs-857983649 pre .hljs-params{color:#444}.cxs-857983649 pre .hljs-comment{color:#444}.cxs-857983649 pre .hljs-doctag{color:#444}.cxs-857983649 pre .hljs-meta{color:#444}.cxs-857983649 pre .hljs-meta-keyword{color:#05a}.cxs-857983649 pre .hljs-meta-string{color:#05a}.cxs-857983649 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid}.cxs-857983649 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-857983649 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-857983649 td{vertical-align:top;line-height:inherit}.cxs-857983649 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-857983649 a{color:#05a}.cxs-857983649 a:hover{text-decoration:underline}.cxs-857983649 ul{list-style:square inside;padding-left:0px;margin-top:0px;margin-bottom:32px}.cxs-3954183383{font-size:24px}.cxs-2947628758 td{vertical-align:top;line-height:inherit}.cxs-2792547219{}.cxs-2792547219 h1{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h2{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h3{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h4{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h5{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 h6{font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2792547219 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2792547219 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#f6f6f6;border-radius:2px}.cxs-2792547219 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#f6f6f6;border-radius:2px}.cxs-2792547219 pre .hljs-keyword{color:#666}.cxs-2792547219 pre .hljs-built_in{color:#888}.cxs-2792547219 pre .hljs-type{color:#888}.cxs-2792547219 pre .hljs-literal{color:#666}.cxs-2792547219 pre .hljs-number{color:#1f80ff}.cxs-2792547219 pre .hljs-regexp{color:#666}.cxs-2792547219 pre .hljs-string{color:#888}.cxs-2792547219 pre .hljs-subst{color:#888}.cxs-2792547219 pre .hljs-symbol{color:#666}.cxs-2792547219 pre .hljs-class{color:#666}.cxs-2792547219 pre .hljs-function{color:#1f80ff}.cxs-2792547219 pre .hljs-title{color:#666}.cxs-2792547219 pre .hljs-params{color:#888}.cxs-2792547219 pre .hljs-comment{color:#888}.cxs-2792547219 pre .hljs-doctag{color:#888}.cxs-2792547219 pre .hljs-meta{color:#888}.cxs-2792547219 pre .hljs-meta-keyword{color:#666}.cxs-2792547219 pre .hljs-meta-string{color:#666}.cxs-2792547219 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #eee}.cxs-2792547219 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-2792547219 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-2792547219 td{vertical-align:top;line-height:inherit}.cxs-2792547219 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-2792547219 a{color:#666;text-decoration: none}.cxs-2792547219 a:hover{text-decoration:underline}.cxs-2792547219 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-183745076{}.cxs-183745076 h1{font-weight:500;letter-spacing:-0.01em;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h2{font-weight:500;letter-spacing:-0.01em;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h3{font-weight:500;letter-spacing:-0.01em;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h4{font-weight:500;letter-spacing:-0.01em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h5{font-weight:500;letter-spacing:-0.01em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-183745076 h6{font-weight:500;letter-spacing:-0.01em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-183745076 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-183745076 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#f5f5f5;border-radius:2px}.cxs-183745076 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#f5f5f5;border-radius:2px}.cxs-183745076 pre .hljs-keyword{color:#2196f3}.cxs-183745076 pre .hljs-built_in{color:#1565c0}.cxs-183745076 pre .hljs-type{color:#1565c0}.cxs-183745076 pre .hljs-literal{color:#2196f3}.cxs-183745076 pre .hljs-number{color:#ff4081}.cxs-183745076 pre .hljs-regexp{color:#2196f3}.cxs-183745076 pre .hljs-string{color:#1565c0}.cxs-183745076 pre .hljs-subst{color:#1565c0}.cxs-183745076 pre .hljs-symbol{color:#2196f3}.cxs-183745076 pre .hljs-class{color:#2196f3}.cxs-183745076 pre .hljs-function{color:#ff4081}.cxs-183745076 pre .hljs-title{color:#2196f3}.cxs-183745076 pre .hljs-params{color:#1565c0}.cxs-183745076 pre .hljs-comment{color:#1565c0}.cxs-183745076 pre .hljs-doctag{color:#1565c0}.cxs-183745076 pre .hljs-meta{color:#1565c0}.cxs-183745076 pre .hljs-meta-keyword{color:#2196f3}.cxs-183745076 pre .hljs-meta-string{color:#2196f3}.cxs-183745076 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #e0e0e0}.cxs-183745076 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-183745076 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-183745076 td{vertical-align:top;line-height:inherit}.cxs-183745076 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-183745076 a{color:#2196f3;text-decoration: none}.cxs-183745076 a:hover{text-decoration:underline}.cxs-183745076 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-3759173635{font-size:14px}.cxs-2947628758 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3147789143{margin-left:-16px;margin-right:-16px}.cxs-3377994344{}.cxs-3377994344:hover{box-shadow:inset 0 0 0 999px rgba(0, 0, 0, .125)}.cxs-2262331773{font-size:20px}.cxs-2947628758 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-424651569{font-size:20px}.cxs-2947628758 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #ddd}.cxs-3057891252{font-size:14px}.cxs-3057891252 h1{font-size:inherit;margin-top:32px}.cxs-3057891252 h1:before{content:"# ";color:#888}.cxs-3057891252 h2{font-size:inherit;margin-top:32px}.cxs-3057891252 h2:before{content:"## ";color:#888}.cxs-3057891252 h3{font-size:inherit}.cxs-3057891252 h3:before{content:"### ";color:#888}.cxs-3057891252 h4{font-size:16px}.cxs-3057891252 h5{font-size:14px}.cxs-3057891252 h6{font-size:12px}.cxs-3057891252 p{overflow-x:auto}.cxs-3057891252 code{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 code:before{content:"`"}.cxs-3057891252 code:after{content:"`"}.cxs-3057891252 pre{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 pre:before{content:"```";display:block}.cxs-3057891252 pre:after{content:"```";display:block}.cxs-3057891252 pre .hljs-keyword{color:#666}.cxs-3057891252 pre .hljs-built_in{color:#888}.cxs-3057891252 pre .hljs-type{color:#888}.cxs-3057891252 pre .hljs-literal{color:#666}.cxs-3057891252 pre .hljs-number{color:#1f80ff}.cxs-3057891252 pre .hljs-regexp{color:#666}.cxs-3057891252 pre .hljs-string{color:#888}.cxs-3057891252 pre .hljs-subst{color:#888}.cxs-3057891252 pre .hljs-symbol{color:#666}.cxs-3057891252 pre .hljs-class{color:#666}.cxs-3057891252 pre .hljs-function{color:#1f80ff}.cxs-3057891252 pre .hljs-title{color:#666}.cxs-3057891252 pre .hljs-params{color:#888}.cxs-3057891252 pre .hljs-comment{color:#888}.cxs-3057891252 pre .hljs-doctag{color:#888}.cxs-3057891252 pre .hljs-meta{color:#888}.cxs-3057891252 pre .hljs-meta-keyword{color:#666}.cxs-3057891252 pre .hljs-meta-string{color:#666}.cxs-3057891252 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px}.cxs-3057891252 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3057891252 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3057891252 td{vertical-align:top;line-height:inherit}.cxs-3057891252 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3057891252 a{color:inherit}.cxs-3057891252 ul{list-style-type:none;padding-left:0px}.cxs-3057891252 li{}.cxs-3057891252 li:before{content:"- "}.cxs-3057891252 b{}.cxs-3057891252 b:before{content:"*"}.cxs-3057891252 b:after{content:"*"}.cxs-3057891252 pre code{}.cxs-3057891252 pre code:before{content:none}.cxs-3057891252 pre code:after{content:none}.cxs-3075267555{font-size:20px;line-height:1.625}.cxs-3075267555 h1{font-weight:600;letter-spacing:0.1em;font-size:48px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h2{font-weight:600;letter-spacing:0.1em;font-size:24px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h3{font-weight:600;letter-spacing:0.1em;font-size:20px;margin-top:48px;margin-bottom:8px}.cxs-3075267555 h4{font-weight:600;letter-spacing:0.1em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 h5{font-weight:600;letter-spacing:0.1em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 h6{font-weight:600;letter-spacing:0.1em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-3075267555 p{overflow-x:auto;font-size:20px;margin-top:0px;margin-bottom:16px}.cxs-3075267555 code{font-family:Menlo, monospace;font-size:14px;color:#ab61ff}.cxs-3075267555 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-left:16px;margin-top:8px;margin-bottom:32px;border-left:2px solid #ccd}.cxs-3075267555 pre .hljs-keyword{color:#0099e0}.cxs-3075267555 pre .hljs-built_in{color:#ab61ff}.cxs-3075267555 pre .hljs-type{color:#ab61ff}.cxs-3075267555 pre .hljs-literal{color:#0099e0}.cxs-3075267555 pre .hljs-number{color:#f7b}.cxs-3075267555 pre .hljs-regexp{color:#0099e0}.cxs-3075267555 pre .hljs-string{color:#ab61ff}.cxs-3075267555 pre .hljs-subst{color:#ab61ff}.cxs-3075267555 pre .hljs-symbol{color:#0099e0}.cxs-3075267555 pre .hljs-class{color:#0099e0}.cxs-3075267555 pre .hljs-function{color:#f7b}.cxs-3075267555 pre .hljs-title{color:#0099e0}.cxs-3075267555 pre .hljs-params{color:#ab61ff}.cxs-3075267555 pre .hljs-comment{color:#ab61ff}.cxs-3075267555 pre .hljs-doctag{color:#ab61ff}.cxs-3075267555 pre .hljs-meta{color:#ab61ff}.cxs-3075267555 pre .hljs-meta-keyword{color:#0099e0}.cxs-3075267555 pre .hljs-meta-string{color:#0099e0}.cxs-3075267555 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid #ccd}.cxs-3075267555 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3075267555 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3075267555 td{vertical-align:top;line-height:inherit}.cxs-3075267555 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3075267555 a{color:inherit}.cxs-3075267555 a:hover{color:#0099e0}.cxs-3075267555 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-2947628758{}.cxs-2947628758 h1{font-weight:600;line-height:1.25;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h2{font-weight:600;line-height:1.25;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h3{font-weight:600;line-height:1.25;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h4{font-weight:600;line-height:1.25;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h5{font-weight:600;line-height:1.25;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h6{font-weight:600;line-height:1.25;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2947628758 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre .hljs-keyword{color:#08e}.cxs-2947628758 pre .hljs-built_in{color:#059}.cxs-2947628758 pre .hljs-type{color:#059}.cxs-2947628758 pre .hljs-literal{color:#08e}.cxs-2947628758 pre .hljs-number{color:#e08}.cxs-2947628758 pre .hljs-regexp{color:#08e}.cxs-2947628758 pre .hljs-string{color:#059}.cxs-2947628758 pre .hljs-subst{color:#059}.cxs-2947628758 pre .hljs-symbol{color:#08e}.cxs-2947628758 pre .hljs-class{color:#08e}.cxs-2947628758 pre .hljs-function{color:#e08}.cxs-2947628758 pre .hljs-title{color:#08e}.cxs-2947628758 pre .hljs-params{color:#059}.cxs-2947628758 pre .hljs-comment{color:#059}.cxs-2947628758 pre .hljs-doctag{color:#059}.cxs-2947628758 pre .hljs-meta{color:#059}.cxs-2947628758 pre .hljs-meta-keyword{color:#08e}.cxs-2947628758 pre .hljs-meta-string{color:#08e}@media screen and (min-width: 52em) { .cxs-424651569{} }@media screen and (min-width: 52em) { .cxs-799160745{font-size:72px} }@media screen and (min-width: 52em) { .cxs-3759173635{} }@media screen and (min-width: 52em) { .cxs-3954183383{} }@media screen and (min-width:52em) { .cxs-857983649 h3{font-size:24px} }@media screen and (min-width:52em) { .cxs-857983649 h2{font-size:48px} }@media screen and (min-width:52em) { .cxs-857983649 h1{font-size:48px} }@media screen and (min-width: 52em) { .cxs-2262331773{font-size:32px} }</style></head><body style="margin:0;"><div class="Xv" style="font-family:-apple-system, BlinkMacSystemFont, sans-serif;font-weight:400;line-height:1.5;color:#111;background-color:#fff;"><header class="BannerHeader" style="display:flex;align-items:center;justify-content:center;text-align:left;min-height:100vh;color:white;background-color:#111;background-image:url(undefined);background-size:cover;background-position:center;"><div style="box-sizing:border-box;width:100%;max-width:1024px;margin-left:auto;margin-right:auto;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;"><h1 class="cxs-799160745" style="box-sizing:border-box;font-weight:600;line-height:1.25;margin:0;">idjthursday17</h1><h2 class="cxs-3954183383" style="box-sizing:border-box;font-weight:600;line-height:1.25;margin:0;">Fundamentals of Data and Interactivity. Thursday class, Fall 2017, CUNY-J School</h2><div class="cxs-1246195080" style="box-sizing:border-box;padding-top:16px;padding-bottom:16px;"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?text=idjthursday17%3A%20Fundamentals%20of%20Data%20and%20Interactivity.%20Thursday%20class%2C%20Fall%202017%2C%20CUNY-J%20School&amp;url=&amp;via=&amp;hashtags=&amp;size=" height="20" allowtransparency="true" frameborder="0" scrolling="no" style="box-sizing:border-box;width:61px;overflow:hidden;margin:8px;"></iframe><iframe src="https://ghbtns.com/github-btn.html?type=star&amp;count=true&amp;user=datajournalists&amp;repo=idjthursday17&amp;size=" height="20" frameborder="0" scrolling="no" style="box-sizing:border-box;width:100px;overflow:hidden;margin:8px;"></iframe><div class="cxs-4066908388 cxs-display-table"></div></div></div></header><div class="cxs-2947628758" style="box-sizing:border-box;max-width:1024px;margin-left:auto;margin-right:auto;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;"><article style="box-sizing:border-box;"><div><h1>Fundamentals of Interactivity and Data Journalism (IDJ)</h1>
+<p>Syllabus. Thursday class. CUNY-J School. Fall 2017</p>
+<p><strong><em>Updated on September 6, 2017</em></strong></p>
+<p><strong>Short url: **</strong><a href="http://bit.ly/fidata1">http://bit.ly/fidata**1</a><strong>
+</strong>Semester:<strong> Fall 2017. Three credits.
+</strong>Duration:<strong> 15 Weeks.
+</strong>Start date:<strong> August 25. Final session: December 15, 2017.
+</strong>NO CLASSES<strong> on September 21 (this class takes place on &quot;Thursday schedule&quot; on Tuesday September 19), October 5 and November 23.
+</strong>Meeting/Room:**</p>
+<ul>
+<li>Fridays 9:30 am - 12:20 pm.</li>
+<li>Room 432.
+<strong>Professor:</strong><a href="https://www.journalism.cuny.edu/faculty/miguel-paz/">Miguel Paz</a>
+<strong>Communication channels: </strong></li>
+<li>Slack: It’s a multi-channel messaging service. It is the hub of conversation, questions, recommendations and updates for this class. This is where most of our comms happen. To join Fundamentals of Interactive and Data Journalism’s official Slack channel please go to <a href="https://miguelpaz.slack.com/">https://miguelpaz.slack.com/</a> and request access.</li>
+<li>Email: for questions, comments, class updates <a href="mailto:miguel.paz@journalism.cuny.edu">miguel.paz at journalism.cuny.edu</a>.</li>
+<li>SMS: No calls or voicemail, only text messages please. Number given to you in our first class. I will call back as soon as possible.
+<strong>Office Hours:</strong>           </li>
+<li>Tuesdays, Thursdays and Fridays at lunch time (12:30 pm - 2:00 pm).</li>
+<li>Sign up for office hours here: <a href="https://calendly.com/miguelpaz/officehours">https://calendly.com/miguelpaz/officehours</a> (if hours are booked, reach me via Slack, email or text to ask if we can meet in another moment. I encourage you to meet out of class to talk about your work and reporting projects).
+<strong>Academic Calendar:</strong> <a href="http://www2.cuny.edu/academics/academic-calendars/">Fall Semester Calendar</a> and the <a href="https://www.journalism.cuny.edu/current-students/class-schedule/">Fall Semester Class Schedule</a>.
+<strong>Please Note:</strong> This syllabus is a collaborative effort between all the instructors that teach this course. However the lesson plan is subject to change depending on the classroom progress and to include useful new materials. Any updates will be included in the Syllabus and you will be notified as soon as possible.</li>
+</ul>
+<p><strong>Syllabus Index</strong></p>
+<p>[[TOC]]</p>
+<h2>1. Course Description</h2>
+<p>This three-credit course introduces students to conceptualizing and producing content across multiple platforms --from Web sites to tablets and mobile devices-- by exploring essential concepts, tools,  and interactive story forms.</p>
+<p>This course reviews how the news industry is adapting to new technologies and ways to map or illustrate data and news. Students will also explore ways to work with data for storytelling and add interactivity to storytelling.</p>
+<p>More specifically, this course introduces students to a) getting acquainted with project planning for an audience, prototyping techniques, core design and style concepts b) learning the basics of HTML/CSS, c) fine tuning editorial judgement by analyzing stories and interactive data projects d) obtaining, analyzing and presenting data for storytelling e) create stories with charts and maps. They'll also leverage existing platforms. We'll explore all these tools and technologies within the journalistic context of pitching, reporting, producing data and interactive news packages.</p>
+<p>The course covers fundamental technical skills that will serve as the foundation for your data and interactive work at the CUNY Graduate School of Journalism.</p>
+<h3>How the course works</h3>
+<p>Classes include Instructor lectures, step by step demos, discussion of examples and readings, exercises, student presentations and some guests speakers. Most of the exercises will be done in class time, with the exception of homework assignments you will do out of class. All assigned readings, slides and any other contents will be included weekly in the Syllabus and will be shared in the Slack group.  This course focuses on teaching you editorial judgement, data and interactive fundamental skills. Therefore, you will use your Craft 1 course reporting as the baseline for this course hands on work. Our classroom operates as a newsroom, geared towards digital web production. Most of the feedback will be given in class and office hours. Also each student will have an individual grades document, where you will be able to see your assignment grades.</p>
+<h3>Technical requirements</h3>
+<ul>
+<li><p>Pens and paper to draw, sharpies, post its</p>
+</li>
+<li><p>Apple laptop with Microsoft Excel installed.</p>
+</li>
+<li><p>Google Chrome (good to also have Firefox installed)</p>
+</li>
+<li><p>Text editor: <a href="http://www.sublimetext.com/2">Sublime Text</a> or <a href="https://atom.io/">Atom</a>.</p>
+</li>
+<li><p>A free and open source FTP client: <a href="https://filezilla-project.org/download.php?type=client">Filezilla</a> or <a href="https://cyberduck.io/">Cyberduck</a>.</p>
+</li>
+<li><p>A Datawrapper account (I will send you an invite to your email)</p>
+</li>
+<li><p>Get a domain name and hosting for your website (I will give you details for this)</p>
+</li>
+<li><p>Other open source software that you will be asked to use</p>
+</li>
+</ul>
+<h2>2. Learning Objectives</h2>
+<p>Students will leave this course with experience in:</p>
+<ul>
+<li><p>Producing journalism for the Internet</p>
+</li>
+<li><p>Building basic HTML pages and layouts</p>
+</li>
+<li><p>Manipulating web content design using CSS</p>
+</li>
+<li><p>Using an FTP client to publish content online</p>
+</li>
+<li><p>Finding and using data responsibly and effectively</p>
+</li>
+<li><p>Learning the math required to effectively analyze data</p>
+</li>
+<li><p>Producing basic maps and charts that convey information clearly</p>
+</li>
+<li><p>Reporting and producing stories with data and interactivity</p>
+</li>
+<li><p>Crafting questions to ensure receive technical guidance from web programming communities</p>
+</li>
+</ul>
+<h2>3. Class rules</h2>
+<p><strong>Attendance and punctuality matter.</strong> If you come in late or miss classes 3 times unexcused, your overall grade will be lowered by 5 percent. The only exceptions to this rule are cases of medical emergency, family emergency, or transportation accident. Attending events does not qualify as an exception. If you’re sick or late, please let me know via email, Slack or text. If you don’t show up, you will hear from me.</p>
+<p><strong>Communicate.</strong> If you have a problem or if you have difficulties, tell me right away, not after is too late. In journalism that’s what we do. When we have a problem we immediately call our editor. If you think something is not working in the class, tell me. It is my duty to teach you in the best possible way.</p>
+<p><strong>Be accurate.</strong> Always double check everything. Proofread. Ask at least two classmates to review your story before handing it in. When you make mistakes, it hurts your credibility and affects your grade.</p>
+<p><strong>Keep up with the news.</strong> Consuming information on a daily basis leads to a healthy diet of background, helps you connect the dots and discover story ideas to work on, If you care about a topic or your subject concentration you have to stay in top of the game.</p>
+<p><strong>Be a pro.</strong> Honesty, courtesy, curiosity and professionalism are the core values of a journalist. Behave like one because you are a journalist. When classmates are presenting or we have guests or we are working in teams don’t multitask, focus.</p>
+<p><strong>Code of honor.</strong> This class follows the guidelines of the student handbook of our school. More so, in journalism plagiarism or falsification of data, sources and facts are serious crimes that can lead to failing this class. You may also be the subject of suspension, probation or expulsion, pending the decision of the School administration.</p>
+<h2>4. Diversity</h2>
+<p>It's critical that students learn to include a diverse set of voices in their stories and their reporting, something that is often glossed over when finding stories in spreadsheets and online sources. You are encouraged and expected to look for stories and voices about and from communities that are underrepresented. This also applies to our classroom. Diversity requires us all to discuss differences with respect and empathy, regarding race, gender, age, religion, gender, sexual preference, disability, language, origin or political beliefs.</p>
+<h2>5. Instructor and office hours</h2>
+<p>Miguel Paz is an investigative journalist and digital media strategist with over 18 years of experience reporting about politics, business and power in Latin America. He is a full time professor affiliated to the Interactive Department of the CUNY Graduate School of Journalism, where he teaches Data Journalism courses in the regular MA, Craft 2 Advanced Reporting in the Spanish language concentration and Data Skills in the Social Journalism concentration. <a href="https://www.journalism.cuny.edu/faculty/miguel-paz/">Longer bio here</a>.</p>
+<p>Office hours are on Tuesdays, Thursdays and Fridays from 12:30 pm to 2:00 pm in Office 421A. Students are encouraged to meet with the instructor on a regular basis. You can <a href="https://calendly.com/miguelpaz/officehours">make an appointment here</a>.</p>
+<h2>6. Assignments &amp; Due Dates</h2>
+<p>Deadlines are 30 minutes before class starts (8:30 am). You must file your assignment using this form <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a></p>
+<h3>No. 1 - Paper prototype</h3>
+<p>Create a plan for covering a major news event during the initial breaking news cycle and ongoing coverage. Select your team, determine the skills you need and decide what each team member  will be doing. Your team must be made of 2 or 3 people.</p>
+<p>Then plan an interactive project as part of your coverage and create a paper prototype or wireframe to explain your concept and how it will work.</p>
+<p>Your hand-drawn prototype must include:</p>
+<ul>
+<li><p>A placeholder headline</p>
+</li>
+<li><p>A wireframe for each photo and interactive element</p>
+</li>
+<li><p>A visual illustration of what happens when a user clicks on interactive elements.</p>
+</li>
+<li><p>Here's <a href="https://drive.google.com/file/d/0B0VZ1RS_glBENVZJR0tFV1BsWFU/view?usp=sharing">an example</a> from the class of 2016.</p>
+</li>
+<li><p>A clear one page <a href="http://happyhacks.tumblr.com/post/99561716415/write-a-manifesto">Manifesto</a> that includes: Users, Needs, Goals/Purpose, what you will do and what elements you will include and what you will not do.</p>
+</li>
+<li><p>You’ll present your idea in front of the class the following week, when you will pretend your classmates are the editors of your publication and provide critique.</p>
+</li>
+</ul>
+<p><strong>Deadline</strong></p>
+<p>Due: Thursday Sept. 14 at 8:30 am. File here <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a></p>
+<p>Showing: Thursday Sept. 14th.</p>
+<h3>No. 2 - HTML/CSS Web page</h3>
+<p>Full details of assignment, including layout, typography, color, etc. here: <a href="http://bit.ly/htmlcssassignment">http://bit.ly/htmlcssassignment</a></p>
+<p>Pitch me 3 reporting ideas related to your Craft of Reporting class beat. I will pick one. You will report that topic during the semester and use it as the base of your assignments 2, 3 and 4. In case it falls apart, you will move on to the next topic you pitched to me.</p>
+<p>Using edited text and images from your reporting, create a story Web page using HTML and style it with CSS. You should have the following elements:</p>
+<ul>
+<li><p>Headline</p>
+</li>
+<li><p>Summary</p>
+</li>
+<li><p>Byline that changes color when you hover</p>
+</li>
+<li><p>A 700px by 450px photo centered below the headline and byline, with a caption and credit (remember what makes quality photos from John Smock's orientation session. If not, ask me).</p>
+</li>
+<li><p>One or more pull-quotes</p>
+</li>
+<li><p>About ¼ of the way down, you must have a graphic made of three portraits (each 200px wide), with a credit.</p>
+</li>
+<li><p>Each portrait must have a quote below it and the name of the person quoted (aligned right at the bottom of photo).</p>
+</li>
+<li><p>A related individual tweet and/or video or any other embedded element in appropriate spots in the text</p>
+</li>
+<li><p>At least three links to related information or articles included within the story.</p>
+</li>
+<li><p>You must comment your HTML and CSS. What is each line or section accomplishing?</p>
+</li>
+<li><p><strong>When the browser window is resized, the content must be responsive.</strong></p>
+</li>
+<li><p>The folder hierarchy must be as instructed during the lessons (proper naming convention, index.html, all lowercase, no spaces, etc.)</p>
+</li>
+</ul>
+<p><strong>Logistics:</strong></p>
+<ol>
+<li><p>Your project folder should be the name of your project slug (one or two words, lowercase no spaces between words)</p>
+</li>
+<li><p>Remember to use proper file names (index.html, all lowercase, etc)</p>
+</li>
+<li><p>Have proper folder/file hierarchy</p>
+</li>
+<li><p>FTP to your hosting service</p>
+</li>
+<li><p>Figure out the URL (web address) for your piece.</p>
+</li>
+</ol>
+<p><strong>Deadline</strong></p>
+<p>Due TBD -- File here<a href="http://bit.ly/idjassignmentsform"> http://bit.ly/idjassignmentsform</a></p>
+<h3>No. 3 - Data chart</h3>
+<p>Full details of assignment <a href="http://bit.ly/idj16chartassignment">http://bit.ly/idj16chartassignment</a></p>
+<ul>
+<li><p>Find data related to your reporting topic, that can be represented as one or more charts to tell a compelling story that illustrates a news-worthy point.</p>
+</li>
+<li><p><strong>Pitch me your idea by TBD</strong> (why is it interesting, timely and insightful). -- File your pitch here <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a>  </p>
+</li>
+<li><p>The Pitch should say why is it interesting, timely and insightful and what pre-reporting you’ve done. You must include:
+a) A proposed title or headline
+b) A lead
+c) A list of the story’s key elements
+d) An explanation of why this story matters now
+e) A description of the data and link to the data you are using</p>
+</li>
+<li><p>Once I approve the pitch, call an expert on that subject who can evaluate the relevance and accuracy of the concept/trend you found in the data.</p>
+</li>
+<li><p>Write a 150-word piece (including the quote)  and create a chart. If you have the need to write something longer, please go ahead but is not mandatory.</p>
+</li>
+<li><p>Build your own HTML/CSS story page with the following:</p>
+<ul>
+<li><p>Headline</p>
+</li>
+<li><p>Byline</p>
+</li>
+<li><p>Your 150-word text.</p>
+</li>
+<li><p>One Chart or more than one Chart, embedded (you will be judge by the story you are telling with the chart or charts not by the quantity of charts). Do not create a static graphic (image). The chart must include:</p>
+<ul>
+<li><p>A title</p>
+</li>
+<li><p>A description or summary</p>
+</li>
+<li><p>Data source attribution (with name of the data source.</p>
+</li>
+<li><p>Link to the data source.</p>
+</li>
+<li><p>Notes (optional)</p>
+</li>
+<li><p>You will choose where to place the chart/s in your story</p>
+</li>
+</ul>
+</li>
+<li><p>Link to original data set</p>
+</li>
+<li><p>A photograph that reflects the topic, centered above the headline, with a caption and credit</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Deadline</strong>
+The final assignment is due <strong>TBD</strong>. You will FTP the content to your site and send me the link. File here <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a></p>
+<h3>No. 4 - Mapping</h3>
+<ul>
+<li><p>This is a news short story, based on your reporting topic -- 150-250 words -- that has a geographic component which you will illustrate using a map or maps.</p>
+</li>
+<li><p><strong>Pitch by TBD</strong>, pitch me your idea (why is it interesting, timely and insightful). -- File your pitch here <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a></p>
+</li>
+<li><p>The Pitch should say why is it interesting, timely and insightful and what pre-reporting you’ve done. You must include:
+a) A proposed title or headline
+b) A lead
+c) A list of the story’s key elements
+d) An explanation of why this story matters now
+e) A description of the data and link to the data you are using</p>
+</li>
+<li><p>Once I approve the pitch, call an expert on that subject  who can evaluate the relevance and accuracy of  the concept/trends you found in the data.</p>
+</li>
+<li><p>Write a maximum 150-word piece (including a  quote from an expert or relevant source for your story)  and create one or more maps.</p>
+</li>
+<li><p>Build your own HTML/CSS page with the following:</p>
+<ul>
+<li><p>A meaningful headline that captures the story, not that simply labels the map</p>
+</li>
+<li><p>Byline</p>
+</li>
+<li><p>Your 150-word max text</p>
+</li>
+<li><p>An interactive map. Do not create a static graphic.</p>
+</li>
+<li><p>Link to original data set</p>
+</li>
+<li><p>Link to the final clean data you used to create the graphic</p>
+</li>
+<li><p>A photograph that reflects the topic as an illustration, centered above the headline, with a caption and credit</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Deadline</strong></p>
+<p>The final assignment is <strong>due TBD</strong>. You will FTP the content to your site and send me the link. File here <a href="http://bit.ly/idjassignmentsform">http://bit.ly/idjassignmentsform</a></p>
+<h2>7. Deadlines policy</h2>
+<p>Deadlines are mandatory. You must turn in your assignments before the date and time given to you as a deadline. <strong>For each day you miss a deadline you will drop 10% of the grade on your assignment. </strong>Plan ahead and remember: done is better than perfect. It will always be better to hand in something than nothing. If you are having trouble with your assignment let me know immediately, do not wait until it is too late. In return you will get feedback about it from me within reasonable time.</p>
+<p>You must file all your assignments using the <a href="http://bit.ly/idjassignmentsform">assignments form</a></p>
+<h2>8. Grading Rubric</h2>
+<p><strong>For all assignments</strong></p>
+<p>In assessing students' work, the instructor will focus on the following factors applicable to all assignments (specific criteria for each assignment will be detailed later):</p>
+<ul>
+<li><p>Process: Were the drafts iterated and improved based on faculty feedback?</p>
+</li>
+<li><p>Quality and Shine: Is it executed with skill and subtlety, and has it been edited well and polished?</p>
+</li>
+<li><p>Organization and Presentation: Is it presented clearly and in a professional manner suitable for an audience?</p>
+</li>
+<li><p>Effort and Application: Has the work been prepared with careful thought and attention to detail, and does it take appropriate advantage of the relevant tools?</p>
+</li>
+<li><p>Punctuality and Completeness: Is it on time and complete, and does it fulfill the assignment?</p>
+</li>
+</ul>
+<p><strong>For Discussions</strong></p>
+<ul>
+<li><p>Preparedness: Has the student completed the work necessary in preparation for the discussion (viewing assigned video, completing assigned reading or tutorial)?</p>
+</li>
+<li><p>Participation: Was the student engaged in the discussion (both paying attention and participating)?</p>
+</li>
+</ul>
+<p><strong>For In-class Exercises</strong></p>
+<ul>
+<li><p>Effort: Did the student try to complete the exercise to better understand the lesson at hand?</p>
+</li>
+<li><p>Participation: If the exercise involves collaboration, did the student contribute?</p>
+</li>
+</ul>
+<h2>9. Grading Scale</h2>
+<p>Final grades in the course correspond to the grading scale used in the CUNY Graduate School of Journalism. Here is the minimum percentage of each letter grade:</p>
+<ul>
+<li>97: A+  Stellar work. Ready to be published by a professional news organization with minimal changes.</li>
+<li>93: A Excellent work. It is ready to be published professionally with some changes.</li>
+<li>90: A- Good quality work, although it needs a slightly more significant revision to be able to be published.</li>
+<li>87: B+ Solid work that shows some deficiencies that need to be solved.</li>
+<li>83: B Meets certain requirements, but lacks several important elements.</li>
+<li>80: B- Below average and needs strong overall improvements.</li>
+<li>77: C+ Poor job. It presents many problems of structure, reporting and storytelling</li>
+<li>73: C Almost unacceptable because of major overall problems.</li>
+<li>70: C- Unacceptable. Does not meet the minimum requirements of a graduate level journalism project.</li>
+<li>Anything below a 70 is an F. Work has failed at every level. There is no D in CUNY’s grading scale.</li>
+</ul>
+<p><strong>Assignment Values</strong></p>
+<p>Your grade is based on your performance during the semester. It includes readings, participation, in class exercises and 4 main assignments (one of this, the paper prototyping project, is a group assignment). Each assignment represents a percentage of your final grade and has points that add up to 100 points. Broken down as follows:</p>
+<table>
+  <tr>
+    <td>Assignment</td>
+    <td>Percentage Value</td>
+  </tr>
+  <tr>
+    <td>Paper Prototype </td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>HTML/CSS Web page </td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>Data chart assignment </td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>Map assignment </td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>In-class participation/professionalism</td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>Readings &amp; Quizzes</td>
+    <td>10 points = 10%</td>
+  </tr>
+  <tr>
+    <td>In-class exercises</td>
+    <td>15 points = 15%</td>
+  </tr>
+  <tr>
+    <td>TOTAL</td>
+    <td>100%</td>
+  </tr>
+</table>
+
+
+<h2>10. Schedule</h2>
+<p>What follows is a tentative schedule. This may change depending on how well you are progressing. If we need more time to work on something or change the order of a lesson plan the instructor will update the syllabus and notify the class.</p>
+<h3>Week 1 (Aug. 31) - Overview: What's Interactive Data Journalism?</h3>
+<ul>
+<li><p>Slides week 1 <a href="http://bit.ly/idjweek1">http://bit.ly/idjweek1</a>  </p>
+</li>
+<li><p>Introductions</p>
+</li>
+<li><p>Syllabus review</p>
+</li>
+<li><p>Exercise and presentation of wide-ranging set of examples that showcase the use of data, coding and design to enhance storytelling</p>
+</li>
+<li><p>Readings</p>
+<ul>
+<li><p><a href="http://datajournalismhandbook.org/1.0/en/introduction.html">Intro Chapter of the Data Journalism Handbook</a></p>
+</li>
+<li><p><a href="https://source.opennews.org/articles/how-and-why-cross-disciplinary-collaboration-rocks/">How and Why Cross-Disciplinary Collaboration Rocks </a>(ideation and prototyping)</p>
+</li>
+<li><p><a href="https://www.propublica.org/nerds/item/design-principles-for-news-apps-graphics">Design Principles for News Apps &amp; Graphics</a></p>
+</li>
+<li><p><a href="https://www.instagram.com/p/BCz95yNNUWD/">Archie Tse´s 3 rules for visual storytelling (2016 version)</a></p>
+</li>
+<li><p><a href="http://alistapart.com/article/paperprototyping">Paper prototyping, by Shawn Medero</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Week 2 (Sept. 7) - Paper Prototyping</h3>
+<ul>
+<li><p>Slides week 2 <a href="http://bit.ly/idj_week2">http://bit.ly/idj_week2</a></p>
+</li>
+<li><p>Showcase of prototyping principles</p>
+</li>
+<li><p>Create a plan for covering a major news event. Select your team, determine the skills you need and decide what each team member will be doing.</p>
+</li>
+<li><p>Plan an interactive project as part of your coverage and create a paper prototype or wireframe to explain your concept and how it will work.</p>
+</li>
+<li><p>Incorporate the user experience  in your design decisions and detail these considerations in your site description. You’ll present your idea in front of the class the following week -- pretend your classmates are the editors of your publication.</p>
+</li>
+<li><p>Exercise and <a href="https://docs.google.com/document/d/1DyGQqIbKh0t9rjf4BgbA2Uk-7l6W9rWU7GnpSgwiJUs/edit">details for paper prototype</a> homework assignment</p>
+</li>
+<li><p>Readings:</p>
+<ul>
+<li><p><a href="http://c805362.r62.cf2.rackcdn.com/htmlandcssbook-sample.pdf">HTML and CSS book, chapter 1 </a>(online)</p>
+</li>
+<li><p>Video: <a href="http://www.dontfeartheinternet.com/01-not-tubes/">&quot;What is the Internet, how the web works and what are the basics of a web page&quot;</a>, from Don’t Fear the Internet.</p>
+</li>
+<li><p>Video: <a href="http://www.dontfeartheinternet.com/02-html/">What is HTML our first html webpage</a>,  from Don’t Fear the Internet.</p>
+</li>
+</ul>
+</li>
+<li><p>Other recommended resources (not mandatory):</p>
+<ul>
+<li><p><a href="https://source.opennews.org/en-US/articles/wsj-graphics-team/">How we rebuilt the Wall Street Journal´s Graphics Team </a></p>
+</li>
+<li><p><a href="http://interchangeproject.org/2013/11/02/paper-prototyping/">Paper prototyping, a primer</a></p>
+</li>
+<li><p><a href="http://www.poynter.org/2012/how-wireframing-can-help-journalists-plan-communicate-ideas/188755/">How wireframing can help journalists plan &amp; communicate ideas</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=GrV2SZuRPv0">Watch this funny paper prototyping example video</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=JMjozqJS44M">Video: Rapid prototyping</a></p>
+</li>
+<li><p><a href="http://blog.apps.npr.org/2015/11/19/sequential-visual-stories.html">Do Visual Stories Make People Care</a></p>
+</li>
+<li><p><a href="https://source.opennews.org/en-US/learning/body-parts/">The story behind a graphic on insurance that turned into an unlikely viral hit</a></p>
+</li>
+<li><p><a href="https://medium.com/revelate/paper-prototyping-d53fafc71b78#.lulsc6o36">Paper prototyping, by Ben O’Hear</a></p>
+</li>
+<li><p><a href="http://www.useit.com/alertbox/20030414.html">Paper Prototyping: Get User Data <em>Before</em> Coding (Jakob Nielsen's Alertbox)</a></p>
+</li>
+<li><p><a href="https://www.uxpin.com/studio/blog/paper-prototyping-the-practical-beginners-guide/">Paper Prototyping: The 10-Minute Practical Guide</a></p>
+</li>
+<li><p><a href="https://medium.com/momentary-exploration/prototyping-for-augmented-reality-ffc724a679b2#.bxlnisc0s">Prototyping for Augmented Reality</a></p>
+</li>
+<li><p><a href="https://vimeo.com/9022832">Video: Prototype of a Trip Planning app</a></p>
+</li>
+<li><p><a href="http://en.wikipedia.org/wiki/Paper_prototyping">Paper Prototyping on Wikipedia</a></p>
+</li>
+</ul>
+</li>
+<li><p>Before next class download a text editor: <a href="http://www.sublimetext.com">Sublime Text</a> or <a href="https://atom.io/">Atom</a> and the free and open source FTP client <a href="https://filezilla-project.org/download.php?type=client">Filezilla</a></p>
+</li>
+</ul>
+<h3>Week 3 (Sept. 14) - Paper Prototype Showcase | HTML/CSS 1</h3>
+<ul>
+<li><p>Slides week 3</p>
+</li>
+<li><p>Each team presents its prototype in front of the class and receives feedback from peers and the instructor.</p>
+</li>
+<li><p>Why learn HTML/CSS?</p>
+</li>
+<li><p>HTML/CSS part 1 - the basic concepts.</p>
+</li>
+<li><p>Exercise: Portfolio page</p>
+</li>
+<li><p>Data Assessment Quiz (to do at home)</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 4 (Sept. 19) - HTML/CSS 2</h3>
+<p>(Class on Tuesday, following Thursday schedule)</p>
+<ul>
+<li><p>Slides week4</p>
+</li>
+<li><p>Exercise: finish portfolio page and start story page</p>
+</li>
+<li><p>Inline styling with CSS</p>
+</li>
+<li><p>External styling</p>
+</li>
+<li><p>Margins</p>
+</li>
+<li><p>Padding</p>
+</li>
+<li><p>Border</p>
+</li>
+<li><p>Uploading to hosting service</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>NO CLASSES Sept. 21</h3>
+<h3>Week 5 (Sept. 28) - HTML/CSS 3</h3>
+<ul>
+<li><p>Slides week 5</p>
+</li>
+<li><p>Exercise: story page</p>
+</li>
+<li><p>Id v. Class</p>
+</li>
+<li><p>Float</p>
+</li>
+<li><p>Fonts</p>
+</li>
+<li><p>Color</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>NO CLASSES Oct. 5</h3>
+<h3>Week 6 (Oct. 12) - Design Principles Web/Mobile 1 - HTML/CSS 4</h3>
+<ul>
+<li><p>Slides week 6</p>
+</li>
+<li><p>Typography</p>
+</li>
+<li><p>Space</p>
+</li>
+<li><p>Grouping</p>
+</li>
+<li><p>Hierarchy</p>
+</li>
+<li><p>Color  </p>
+</li>
+<li><p>Exercise: story page polishing</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 7 (Oct. 19) - Data 1</h3>
+<ul>
+<li><p>Numeracy (normalize, percentages, rates, parts of a whole)</p>
+</li>
+<li><p>Basic Excel tutorial (mean, median, mode, sum)</p>
+</li>
+<li><p>Exercises</p>
+</li>
+<li><p>What's the story in the data?</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 8 (Oct. 26) - Data 2</h3>
+<ul>
+<li><p>Excel 2</p>
+</li>
+<li><p>Numeracy (standardize, standard deviation, rate, adjust for inflation, margin of error, sampling, probability, writing comparisons)</p>
+</li>
+<li><p>Using point and click to create formulas, applying conditional formatting to find Top, Bottom values, formating data, working with dates, using counting functions, IF functions such as CountIf, Sumif)</p>
+</li>
+<li><p>Finding and exploring data sets</p>
+</li>
+<li><p>What's the story?</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 9 (Nov. 2) - Data 3</h3>
+<ul>
+<li><p>Excel 3 (Pivot tables)</p>
+</li>
+<li><p>Numeracy (Polling, Margin of error)</p>
+</li>
+<li><p>Exploring data sets</p>
+</li>
+<li><p>What's the story?</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 10 (Nov. 9) - Charts &amp; Graphs 1</h3>
+<ul>
+<li><p>Slides week 10</p>
+</li>
+<li><p>The power of Charts and Graphs</p>
+</li>
+<li><p>When charts work and when they don't</p>
+</li>
+<li><p>Types of charts</p>
+<ul>
+<li><p>Bar Charts</p>
+</li>
+<li><p>Line Charts</p>
+</li>
+<li>Other</li>
+</ul>
+</li>
+<li><p>Datawrapper</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 11 (Nov. 16) - Charts &amp; Graphs 2</h3>
+<ul>
+<li><p>Slides week 11</p>
+</li>
+<li><p>Continuation of exercises from previous week</p>
+</li>
+<li><p>More charts</p>
+</li>
+<li><p>Indexing</p>
+</li>
+<li><p>Scatter Plot</p>
+</li>
+<li><p>Area charts</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>NO CLASSES Nov. 23</h3>
+<h3>Week 12 (Nov. 30) -  Mapping Data 1</h3>
+<ul>
+<li><p>Slides week 12</p>
+</li>
+<li><p>When to map data</p>
+</li>
+<li><p>Organizing information spatially</p>
+</li>
+<li><p>Datawrapper Maps/Carto/FusionTables (will update you on which we will use)</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 13 (Dec. 7) - Mapping Data 2</h3>
+<ul>
+<li><p>Slides week 13</p>
+</li>
+<li><p>Taking the HTML/CSS we've learned, we customize maps with the authoring tool of choice</p>
+</li>
+<li><p>Readings</p>
+</li>
+</ul>
+<h3>Week 14 (Dec. 14) - Showtime</h3>
+<ul>
+<li><p>Students present the final products. Peers and instructor provide constructive feedback.</p>
+</li>
+<li><p>Course evaluation: what went well, what went poorly, what could be done better next time.</p>
+</li>
+</ul>
+<h2>Coaches</h2>
+<p>Coaches work one-on-one with students to guide them on projects and help problem-solve. Students are advised to consult a coach if they have tried something themselves and it hasn’t worked to their satisfaction.</p>
+<p><strong>Kirsti Itameri, Design, WordPress, Illustrator, Photoshop, Social Media</strong> – Newsroom. Office Hours: Tuesdays 6:30-8:30 pm or by appointment. Email: <a href="mailto:kirsti.itameri@journalism.cuny.edu">kirsti.itameri@journalism.cuny.edu</a></p>
+<p><strong>TC McCarthy, Interactive Journalism: Coding </strong>- Newsroom. Office hours: Thursdays 4-6 pm. Email: tc.mccarthy@journalism.cuny.edu</p>
+<p><strong>Malik Singleton, Data Storytelling, WordPress, HTML, CSS</strong> – Newsroom. Office Hours:</p>
+<p>Mondays 5:30-7:30 pm. Email: <a href="mailto:malik.singleton@journalism.cuny.edu">malik.singleton@journalism.cuny.edu</a></p>
+<p><strong>Nicholas Wells</strong> <strong>Data Storytelling, HTML, CSS, R -- </strong> Newsroom. Office Hours: Tuesdays 6:00 - 8:30 pm. Email: <a href="mailto:Nicholasbwells@gmail.com">Nicholasbwells@gmail.com</a></p>
+</div></article></div></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
