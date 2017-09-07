@@ -4,22 +4,32 @@ Syllabus. Thursday class. CUNY-J School. Fall 2017
 ***Updated on September 6, 2017***
 
 **Short url:** [http://bit.ly/fidata1](http://bit.ly/fidata1)
+
 **Semester:** Fall 2017. Three credits.
+
 **Duration:** 15 Weeks. August 25-December 15, 2017.
+
 **NO CLASSES** September 21 (this class takes place on "Thursday schedule" on Tuesday September 19), October 5 and November 23.
+
 **Meeting/Room:**
 - Fridays 9:30 am - 12:20 pm.
 - Room 432.
+
 **Professor:** [Miguel Paz](https://www.journalism.cuny.edu/faculty/miguel-paz/)
+
 **Communication channels:**
+
 - Slack: It’s a multi-channel messaging service. It is the hub of conversation, questions, recommendations and updates for this class. This is where most of our comms happen. To join Fundamentals of Interactive and Data Journalism’s official Slack channel please go to [https://miguelpaz.slack.com/](https://miguelpaz.slack.com/) and request access.
 - Email: for questions, comments, class updates [miguel.paz at journalism.cuny.edu](mailto:miguel.paz@journalism.cuny.edu).
 - SMS: No calls or voicemail, only text messages please. Number given to you in our first class. I will call back as soon as possible.
 
 **Office Hours:**       	
+
 - Tuesdays, Thursdays and Fridays at lunch time (12:30 pm - 2:00 pm).
 - Sign up for office hours here: [https://calendly.com/miguelpaz/officehours](https://calendly.com/miguelpaz/officehours) (if hours are booked, reach me via Slack, email or text to ask if we can meet in another moment. I encourage you to meet out of class to talk about your work and reporting projects).
+
 **Academic Calendar:** [Fall Semester Calendar](http://www2.cuny.edu/academics/academic-calendars/) and the [Fall Semester Class Schedule](https://www.journalism.cuny.edu/current-students/class-schedule/).
+
 **Please Note:** This syllabus is a collaborative effort between all the instructors that teach this course. However the lesson plan is subject to change depending on the classroom progress and to include useful new materials. Any updates will be included in the Syllabus and you will be notified as soon as possible.
 
 **Syllabus Index**
